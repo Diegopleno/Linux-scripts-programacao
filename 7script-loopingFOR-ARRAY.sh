@@ -47,7 +47,9 @@ echo $VAR								#Condição:		VAR < 10	- O loop continua enquanto i for menor q
 done									#Incremento:	VAR++		- A cada iteração, o valor de i é incrementado em 1.
 EOF
 #==========Estrutura de repetição - looping, loop FOR com ARRAY
-# for com array - um array é uma lista de coisas
+#O script ao final, exibe a lista contida dentro do array
+# Um array é uma lista de coisas
+
 
 frutas=(		#este é o array - frutas=(
 Laranja
