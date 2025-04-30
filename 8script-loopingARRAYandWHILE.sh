@@ -68,19 +68,12 @@ EOF
 #==========Estrutura de repetição - ARRAY com WHILE
 # O script tem por objetivo realizar a contagem do array frutas e exibir a quantidade no array
 
-frutas=(		#este é o array - frutas=(
-Laranja
-Melancia
-Morango
-Jabuticaba
-Mamão
-uva)			#fecha o array 
-
-contagem=0
-while [[ $contagem -lt ${#frutas[@]} ]]; do
-	echo $contagem
-	contagem=$(($contagem +1))
-done
+frutas=(Laranja Melancia Morango Jabuticaba Mamão uva)	#Declaração do array frutas
+indice=0												#Varívavel indice é inicializada com valor 0
+while [[ $indice -lt ${#frutas[@]} ]]; do				#A condição verifica se o indice é menor que o array
+	echo $indice										# ${#frutas[@]} retorna o número de elementos no array frutas
+	indice=$(($indice +1))								# indice=$(($contagem + 1)) incrementa o valor de contagem em 1 a cada iteração.
+done												
 
 
 
