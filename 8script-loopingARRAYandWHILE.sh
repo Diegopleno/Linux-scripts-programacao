@@ -47,6 +47,7 @@ echo $VAR								#Condição:		VAR < 10	- O loop continua enquanto i for menor q
 done									#Incremento:	VAR++		- A cada iteração, o valor de i é incrementado em 1.
 EOF
 #fecha bloco comentado
+: << 'EOF'
 #==========Estrutura de repetição - looping, loop FOR com ARRAY
 #O script ao final, exibe a lista contida dentro do array
 # Um array é uma lista de coisas
@@ -62,18 +63,24 @@ uva)			#fecha o array
 										# O comando for inicia um loop que percorre cada elemento do array frutas
 for contagem in ${frutas[@]}; do		# ${frutas[@]} acessa todos os elementos dentro do array
 	echo $contagem						# A variável contagem recebe o valor de cada elemento do array a cada iteração do loop.
-done									
+done
+EOF
+#==========Estrutura de repetição - ARRAY com WHILE
+# O script tem por objetivo realizar a contagem do array frutas e exibir a quantidade no array
 
+frutas=(		#este é o array - frutas=(
+Laranja
+Melancia
+Morango
+Jabuticaba
+Mamão
+uva)			#fecha o array 
 
-
-
-
-
-
-
-
-
-
+contagem=0
+while [[ $contagem -lt ${#frutas[@]} ]]; do
+	echo $contagem
+	contagem=$(($contagem +1))
+done
 
 
 
