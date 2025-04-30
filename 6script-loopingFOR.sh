@@ -38,11 +38,13 @@ fi					#Aqui o operador de comparação é != -> se var um difere de var2
 [ "$VAR" = "$VAR2" ] && echo "5São iguais!" || echo "6são diferentes!" 
 EOF
 #fecha bloco comentado
-#==========
-#=Estrutura de repetição - looping, loop FOR
 
+#==========Estrutura de repetição - looping, loop FOR
+#O for é usado para criar um loop que executa um bloco de código várias vezes
 
-
+for (( VAR = 0; VAR < 10; VAR++ )); do	#Inicialização:	VAR = 0		- Define a variável i com o valor inicial de 0.
+echo $VAR								#Condição:		VAR < 10	- O loop continua enquanto i for menor que 3.
+done									#Incremento:	VAR++		- A cada iteração, o valor de i é incrementado em 1.
 
 
 
